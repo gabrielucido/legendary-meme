@@ -10,13 +10,9 @@ using UnityEngine;
 public abstract class PlayerController : MonoBehaviour
 {
     protected PlayerManager player;
-    // protected Rigidbody2D _rb;
-    // protected CapsuleCollider2D _col;
 
     protected virtual void Awake()
     {
         player = GetComponentInParent<PlayerManager>();
-        // _rb = GetComponent<Rigidbody2D>();
-        // _col = GetComponent<CapsuleCollider2D>();
     }
 }

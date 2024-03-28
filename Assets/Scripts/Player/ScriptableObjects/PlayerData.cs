@@ -3,11 +3,17 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerData : CharacterData
 {
-    [Header("Aim")] 
-    [Tooltip("The aim sensitivity of the player")]
-    public float aimSensitivity = 10;
-    //
-    // [Tooltip("The player's acceleration")]
+    [Header("Aim")] [Tooltip("The aim sensitivity of the player")]
+    public float aimSensitivity = 20;
+
+    [Header("Movement")] [Tooltip("The player's acceleration")]
+    public float acceleration = 100;
+
+    [Tooltip("The player's max speed")] public float maxVelocity = 10;
+
+    // [Header("Attack")] [Tooltip("The player's attack cooldown"), Range(0.1f, 60)]
+    // public float attackCooldown = 1;
+
     // public float acceleration = 120;
     //
     // [Tooltip("The pace at which the player comes to a stop")]

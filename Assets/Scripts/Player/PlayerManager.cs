@@ -5,13 +5,33 @@ public class PlayerManager : MonoBehaviour, ICharacter
     [Header("Required slots")]
     public PlayerData data;
     public GameObject cameraFollowTarget;
-
-    [Header("Movement")] public Vector2 moveDirection = Vector3.zero;
     
-    [Header("Aim")] public Vector2 aimDirection = Vector3.zero;
+
+    [Header("Movement")]
+    public Vector2 moveDirection = Vector3.zero;
+    public float rotationY;
+    
+    [Header("Aim")] 
+    public Vector2 aimDirection = Vector3.zero;
+    
+    [Header("Attacking")]
+    public bool attackPressed;
     
     [Header("Health")] public int healthPoints;
 
+
+    public void AttackPressed()
+    {
+        if (attackPressed)
+        {
+            Debug.Log("Attacking");
+        }
+    }
+
+    public void AttackReleased()
+    {
+        
+    }
 
     public void TakeDamage(int damage)
     {

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(241, 241, 241);">
+        <ui:GroupBox style="align-self: center; align-items: center; width: 100%; height: 100%; justify-content: center;">
+            <ui:Label tabindex="-1" text="My Title" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 22px; -unity-font-style: bold;" />
+            <ui:Button text="Jogar" parse-escape-sequences="true" display-tooltip-when-elided="true" binding-path="playButton" />
+            <ui:Button text="Sair" parse-escape-sequences="true" display-tooltip-when-elided="true" binding-path="exitButton" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

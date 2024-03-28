@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class InputController : PlayerController
+public class PatrollController : PlayerController
 {
     [Header("Actions asset")] public InputActionAsset playerControls;
 
