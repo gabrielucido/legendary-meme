@@ -17,4 +17,4 @@ MonoBehaviour:
   attackDamage: 40
   aimSensitivity: 20
   acceleration: 100
-  maxVelocity: 15
+  maxVelocity: 5

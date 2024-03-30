@@ -9,10 +9,10 @@ using UnityEngine;
 /// </remarks>
 public abstract class PlayerController : MonoBehaviour
 {
-    protected PlayerManager player;
+    protected PlayerManager manager;
 
     protected virtual void Awake()
     {
-        player = GetComponentInParent<PlayerManager>();
+        manager = GetComponentInParent<PlayerManager>();
     }
 }

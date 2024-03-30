@@ -14,12 +14,12 @@ public class PlayerAimController : PlayerController
 
     private void HandleAim()
     {
-        _rotationX -= player.aimDirection.y * player.data.aimSensitivity * Time.deltaTime *
+        _rotationX -= manager.aimDirection.y * manager.data.aimSensitivity * Time.deltaTime *
                       defaultSensitivityMultiplier;
-        player.rotationY += player.aimDirection.x * player.data.aimSensitivity * Time.deltaTime *
+        manager.rotationY += manager.aimDirection.x * manager.data.aimSensitivity * Time.deltaTime *
                             defaultSensitivityMultiplier;
         _rotationX = Mathf.Clamp(_rotationX, -90, 90);
-        player.cameraFollowTarget.transform.rotation = Quaternion.Euler(_rotationX, player.rotationY, 0);
+        manager.cameraFollowTarget.transform.rotation = Quaternion.Euler(_rotationX, manager.rotationY, 0);
     }
 
     private static void LockCursor()

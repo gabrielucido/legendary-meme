@@ -24,16 +24,16 @@ public class PlayerMovementController : PlayerController
     private void HandleMovement()
     {
         _rb.AddForce(
-            transform.TransformDirection(new Vector3(player.moveDirection.x * player.data.acceleration * Time.deltaTime,
+            transform.TransformDirection(new Vector3(manager.moveDirection.x * manager.data.acceleration * Time.deltaTime,
                 0,
-                player.moveDirection.y * player.data.acceleration * Time.deltaTime)),
+                manager.moveDirection.y * manager.data.acceleration * Time.deltaTime)),
             ForceMode.VelocityChange);
-        _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, player.data.maxVelocity);
+        _rb.velocity = Vector3.ClampMagnitude(_rb.velocity, manager.data.maxVelocity);
     }
 
     private void HandleStop()
     {
-        if (player.moveDirection == Vector2.zero)
+        if (manager.moveDirection == Vector2.zero)
         {
             _rb.velocity /= 1.05f;
         }
@@ -41,7 +41,7 @@ public class PlayerMovementController : PlayerController
 
     private void HandleDirection()
     {
-        transform.rotation = Quaternion.Euler(0f, player.rotationY, 0f);
+        transform.rotation = Quaternion.Euler(0f, manager.rotationY, 0f);
     }
 
     private void HandleGravity()

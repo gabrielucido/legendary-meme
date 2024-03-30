@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour, ICharacter
+public class PlayerManager : MonoBehaviour, IPlayer
 {
     [Header("Required slots")]
     public PlayerData data;

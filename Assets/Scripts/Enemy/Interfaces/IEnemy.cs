@@ -1,4 +1,3 @@
-public interface IEnemy
+public interface IEnemy : ICharacter
 {
-    void TakeDamage(int damage);
 }

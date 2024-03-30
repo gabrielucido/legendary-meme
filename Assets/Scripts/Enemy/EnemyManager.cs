@@ -6,6 +6,9 @@ public class EnemyManager : MonoBehaviour, IEnemy
     [Header("Required initialization slots")]
     public EnemyData data;
 
+    public Vector3 positionTarget;
+    public EnemyMode enemyMode = EnemyMode.Idle;
+
     [Header("Health")] public int healthPoints;
 
     public void TakeDamage(int damage)

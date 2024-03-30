@@ -48,20 +48,20 @@ public class PlayerInputController : PlayerController
 
     private void GatherAimInput()
     {
-        _aimAction.performed += ctx => player.aimDirection = ctx.ReadValue<Vector2>();
-        _aimAction.canceled += ctx => player.aimDirection = Vector2.zero;
+        _aimAction.performed += ctx => manager.aimDirection = ctx.ReadValue<Vector2>();
+        _aimAction.canceled += ctx => manager.aimDirection = Vector2.zero;
     }
 
     private void GatherMovementInput()
     {
-        _moveAction.performed += ctx => player.moveDirection = ctx.ReadValue<Vector2>();
-        _moveAction.canceled += ctx => player.moveDirection = Vector2.zero;
+        _moveAction.performed += ctx => manager.moveDirection = ctx.ReadValue<Vector2>();
+        _moveAction.canceled += ctx => manager.moveDirection = Vector2.zero;
     }
 
     private void GatherAttackInput()
     {
-        _attackAction.performed += ctx => player.attackPressed = true;
-        _attackAction.canceled += ctx => player.attackPressed = false;
+        _attackAction.performed += ctx => manager.attackPressed = true;
+        _attackAction.canceled += ctx => manager.attackPressed = false;
     }
 
 
