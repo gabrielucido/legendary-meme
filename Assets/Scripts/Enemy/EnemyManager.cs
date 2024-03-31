@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,16 +12,29 @@ public class EnemyManager : MonoBehaviour, IEnemy
 
     [Header("Health")] public int healthPoints;
 
-    public void TakeDamage(int damage)
-    {
-        Debug.Log("Damamage taken: " + damage.ToString());
-        healthPoints -= damage;
-    }
-
     void Start()
     {
         healthPoints = data.maxHealthPoints;
     }
+
+    private void Update()
+    {
+        HandleDeathCondition();
+    }
+
+    public void TakeDamage(int damage)
+    {
+        healthPoints -= damage;
+    }
+
+    public void HandleDeathCondition()
+    {
+        if (healthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     #region Validation
 

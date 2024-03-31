@@ -19,23 +19,17 @@ public class PlayerManager : MonoBehaviour, IPlayer
     
     [Header("Health")] public int healthPoints;
 
-
-    public void AttackPressed()
-    {
-        if (attackPressed)
-        {
-            Debug.Log("Attacking");
-        }
-    }
-
-    public void AttackReleased()
-    {
-        
-    }
-
     public void TakeDamage(int damage)
     {
-        this.healthPoints -= damage;
+        healthPoints -= damage;
+    }
+
+    public void HandleDeathCondition()
+    {
+        if (healthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()

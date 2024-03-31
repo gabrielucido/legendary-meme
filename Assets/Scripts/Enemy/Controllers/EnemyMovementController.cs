@@ -20,7 +20,7 @@ public class EnemyMovementController : EnemyController
     private void HandleMovement()
     {
         if (manager.enemyMode == EnemyMode.Idle) return;
-        if (Vector3.Distance(manager.positionTarget, transform.position) > .5f)
+        if (Vector3.Distance(manager.positionTarget, transform.position) > .2f)
         {
             MoveTo(manager.positionTarget);
         }
@@ -28,6 +28,6 @@ public class EnemyMovementController : EnemyController
 
     private void MoveTo(Vector3 target)
     {
-        _nma.SetDestination(target);
+        _nma.destination = target;
     }
 }
