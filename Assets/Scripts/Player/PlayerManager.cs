@@ -1,23 +1,26 @@
+using System;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IPlayer
 {
-    [Header("Required slots")]
     public PlayerData data;
     public GameObject cameraFollowTarget;
-    
-
-    [Header("Movement")]
     public Vector2 moveDirection = Vector3.zero;
     public float rotationY;
-    
-    [Header("Aim")] 
     public Vector2 aimDirection = Vector3.zero;
-    
-    [Header("Attacking")]
     public bool attackPressed;
-    
-    [Header("Health")] public int healthPoints;
+    public int healthPoints;
+
+    void Start()
+    {
+        healthPoints = data.maxHealthPoints;
+    }
+
+    private void Update()
+    {
+        HandleDeathCondition();
+    }
+
 
     public void TakeDamage(int damage)
     {
@@ -32,11 +35,6 @@ public class PlayerManager : MonoBehaviour, IPlayer
         }
     }
 
-    void Start()
-    {
-        healthPoints = data.maxHealthPoints;
-    }
-
     #region Validation
 
 #if UNITY_EDITOR
@@ -46,7 +44,7 @@ public class PlayerManager : MonoBehaviour, IPlayer
         {
             Debug.LogError("Please assign a Player Data asset to the Player Manager data slot", this);
         }
-        
+
         if (cameraFollowTarget == null)
         {
             Debug.LogError("Please assign a look target to the Player Manager look target slot", this);

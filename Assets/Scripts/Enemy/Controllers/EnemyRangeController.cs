@@ -9,6 +9,15 @@ public class EnemyRangeController : EnemyController
         if (trigger != null)
         {
             manager.positionTarget = other.gameObject.transform.position;
+            var playerDistance = Vector3.Distance(transform.position, other.gameObject.transform.position);
+            if (playerDistance < 2)
+            {
+                manager.enemyMode = EnemyMode.Attack;
+            }
+            else
+            {
+                manager.enemyMode = EnemyMode.Chase;
+            }
         }
     }
 
@@ -19,6 +28,7 @@ public class EnemyRangeController : EnemyController
         {
             manager.positionTarget = other.gameObject.transform.position;
             manager.enemyMode = EnemyMode.Chase;
+            manager.player = other.gameObject;
         }
     }
 

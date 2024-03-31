@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MainCharacter
   m_EditorClassIdentifier: 
   maxHealthPoints: 100
-  attackCooldown: 1
+  attackCooldown: 0.2
   attackDamage: 40
   aimSensitivity: 20
   acceleration: 100

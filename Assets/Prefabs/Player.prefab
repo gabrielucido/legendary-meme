@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 460295898312306437}
   - component: {fileID: 6406080243485153842}
   - component: {fileID: 8871223499336176993}
+  - component: {fileID: 3292086063995490759}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -192,6 +193,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e153cb7ec74db3b199c82507214f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3292086063995490759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230820155584019665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180649c888d548acbcd0a6a51283673e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hud: {fileID: 4193939098314785532}
 --- !u!1 &2311262989164696278
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +300,7 @@ GameObject:
   - component: {fileID: 7964914580973577201}
   - component: {fileID: 4193939098314785532}
   m_Layer: 3
-  m_Name: Crosshair
+  m_Name: Hud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,6 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: cd4032549bf874164b2aee52e2419d27, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 7c20a776b7a2c45caa236f58c103880e,
+  sourceAsset: {fileID: 9197481963319205126, guid: 40c16eb952df54ac893251245d4392e6,
     type: 3}
   m_SortingOrder: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6733589421732285903}
   - component: {fileID: 5532677649412153043}
   - component: {fileID: 2136100836231985800}
+  - component: {fileID: 2043492748754865129}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -125,8 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 3a866ba86181e4b1abe065000afb2655, type: 2}
   positionTarget: {x: 0, y: 0, z: 0}
-  enemyMode: 0
+  enemyMode: 1
   healthPoints: 100
+  player: {fileID: 0}
 --- !u!114 &5532677649412153043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +158,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentPatrolPointIndex: 0
+--- !u!114 &2043492748754865129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719423316867360123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af996d9ec92848e4a508f20f62dc9a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5600290142756787835
 GameObject:
   m_ObjectHideFlags: 0
